@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+.gnb a {
+    display: block;
+    margin: 15px 0;
+    padding-bottom: 5px;
+}
+
+.gnb a:nth-child(1) {
+    position: relative;
+}
+
+.gnb a:nth-child(1):before {
+    content: "";
+    /* before, after는 inline요소라서 크기값을 가질 수 없으나
+    position: absolute로 주는 순간에 모든 html 요소는 inline으로 바뀜. */
+    position: absolute;
+    background-color: crimson;
+    height: 2px;
+    bottom: 0;
+    width: 0;
+    transition: 0.3s;
+}
+.gnb a:nth-child(1):hover:before {
+    width: 100%;
+}
+
+.gnb a:nth-child(2) {
+    position: relative;
+}
+.gnb a:nth-child(2):before {
+    content: "";
+    /* before, after는 inline요소라서 크기값을 가질 수 없으나
+    position: absolute로 주는 순간에 모든 html 요소는 inline으로 바뀜. */
+    position: absolute;
+    background-color: crimson;
+    height: 2px;
+    bottom: 0;
+    width: 0;
+    transition: 0.3s;
+    /* right를 0로만 해주면 오른쪽에서 왼쪽으로 */
+    right: 0;
+}
+.gnb a:nth-child(2):hover:before {
+    width: 100%;
+}
+.gnb a:nth-child(3) {
+    position: relative;
+}
+.gnb a:nth-child(3):before {
+    content: "";
+    /* before, after는 inline요소라서 크기값을 가질 수 없으나
+    position: absolute로 주는 순간에 모든 html 요소는 inline으로 바뀜. */
+    position: absolute;
+    background-color: crimson;
+    height: 4px;
+    width: 4px;
+    bottom: 0;
+    transition: 0.3s;
+    left: 0;
+}
+.gnb a:nth-child(3):hover:before {
+    left: calc(100% - 4px);
+}
+
+.gnb a:nth-child(4) {
+    position: relative;
+}
+
+.gnb a:nth-child(4):before {
+    content: "";
+    /* before, after는 inline요소라서 크기값을 가질 수 없으나
+    position: absolute로 주는 순간에 모든 html 요소는 inline으로 바뀜. */
+    position: absolute;
+    background-color: crimson;
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    transition: 0.3s;
+    /* 중앙정렬 */
+    left: 50%;
+    /* 밑에 코드를 해주지 않으면 가운데를 기점으로 오른쪽으로 100% 커짐. translateX(-50%)를 통해서 커질 때 그만큼 왼쪽으로 빼주는 것을 해줘야 가운데서 양쪽으로 퍼져나감 */
+    transform: translateX(-50%);
+}
+.gnb a:nth-child(4):hover:before {
+    width: 100%;
+}
+
+.gnb a:nth-child(5) {
+    position: relative;
+}
+.gnb a:nth-child(5):before {
+    content: "";
+    /* before, after는 inline요소라서 크기값을 가질 수 없으나
+    position: absolute로 주는 순간에 모든 html 요소는 inline으로 바뀜. */
+    position: absolute;
+    background-color: crimson;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    transition: 0.3s;
+    /* 중앙정렬 */
+    left: 50%;
+    /* 밑에 코드를 해주지 않으면 가운데를 기점으로 오른쪽으로 100% 커짐. translateX(-50%)를 통해서 커질 때 그만큼 왼쪽으로 빼주는 것을 해줘야 가운데서 양쪽으로 퍼져나감 */
+    transform: translateX(-50%);
+}
+.gnb a:nth-child(5):hover:before {
+    width: 0;
+}
